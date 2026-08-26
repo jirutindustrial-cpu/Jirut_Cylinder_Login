@@ -1,0 +1,22 @@
+
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ cylinder.cylinder_id }}</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main class="info-wrap"><header class="info-header"><div><h1>Cylinder Information</h1><p>Jirut Industrial Co., Ltd.</p></div><a href="{{ url_for('logout') }}">ออกจากระบบ</a></header>
+<section class="card hero-card"><div><div class="eyebrow">Cylinder ID</div><div class="id">{{ cylinder.cylinder_id }}</div></div><span class="badge ok">{{ cylinder.status }}</span></section>
+<div class="grid">
+<section class="card section"><h2>ข้อมูลพื้นฐานถัง</h2>
+<div class="row"><div class="key">Serial Number</div><div class="val">{{ cylinder.serial_number }}</div></div>
+<div class="row"><div class="key">Owner / Customer</div><div class="val">{{ cylinder.owner }}</div></div>
+<div class="row"><div class="key">Gas Type</div><div class="val">{{ cylinder.gas_type }}</div></div>
+<div class="row"><div class="key">Capacity</div><div class="val">{{ cylinder.capacity }}</div></div>
+<div class="row"><div class="key">Tare Weight</div><div class="val">{{ cylinder.tare_weight }}</div></div></section>
+<section class="card section"><h2>ข้อมูลอุปกรณ์</h2>
+<div class="row"><div class="key">Valve Type</div><div class="val">{{ cylinder.valve_type }}</div></div>
+<div class="row"><div class="key">Fusible Plug</div><div class="val">{{ cylinder.fusible_plug }}</div></div></section>
+<section class="card section"><h2>ข้อมูลการตรวจสอบ</h2>
+<div class="row"><div class="key">Last Test Date</div><div class="val">{{ cylinder.last_test }}</div></div>
+<div class="row"><div class="key">Next Test Date</div><div class="val">{{ cylinder.next_test }}</div></div>
+<div class="row"><div class="key">Inspection Result</div><div class="val"><span class="badge ok">{{ cylinder.inspection_result }}</span></div></div></section>
+<section class="card section"><h2>สถานะปัจจุบัน</h2>
+<div class="row"><div class="key">Status</div><div class="val"><span class="badge ok">{{ cylinder.status }}</span></div></div></section>
+</div><section class="card remark"><h2>หมายเหตุ</h2><p>{{ cylinder.remark }}</p></section></main></body></html>

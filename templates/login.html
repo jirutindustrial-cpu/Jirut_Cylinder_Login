@@ -1,0 +1,9 @@
+
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jirut Industrial - Login</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main class="page"><div class="login-shell"><div class="brand"><div class="logo-box">JI</div><h1>Jirut Industrial</h1><p>Cylinder Information System</p></div>
+<section class="card login-card">
+{% with messages=get_flashed_messages() %}{% if messages %}{% for message in messages %}<div class="error">{{ message }}</div>{% endfor %}{% endif %}{% endwith %}
+<form method="post"><label>Username</label><input name="username" autocomplete="username" required>
+<label>Password</label><input name="password" type="password" autocomplete="current-password" required>
+<button type="submit">LOGIN</button></form><div class="security-note">Authorized personnel only</div></section></div></main></body></html>

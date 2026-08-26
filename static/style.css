@@ -1,0 +1,22 @@
+
+:root{--bg:#f3f5f7;--card:#fff;--text:#1f2933;--muted:#667085;--line:#e5e7eb;--accent:#1f4b7a;--okbg:#eaf7ef;--ok:#177245}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Tahoma,sans-serif;background:var(--bg);color:var(--text)} a{color:var(--accent)}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.login-shell{width:min(94vw,440px)} .brand{text-align:center;margin-bottom:18px}
+.logo-box{width:76px;height:76px;margin:0 auto 14px;border-radius:18px;background:var(--accent);color:white;display:grid;place-items:center;font-size:28px;font-weight:800}
+.brand h1{margin:0;font-size:26px}.brand p{margin:8px 0 0;color:var(--muted);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 34px rgba(31,41,51,.08)}
+.login-card{padding:30px} label{display:block;margin:16px 0 7px;font-weight:700;font-size:14px}
+input{width:100%;padding:13px 14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px}
+button{width:100%;border:0;border-radius:10px;padding:13px 16px;margin-top:22px;background:var(--accent);color:white;font-size:16px;font-weight:800}
+.error{background:#fff1f2;color:#a61b29;border:1px solid #fecdd3;padding:10px 12px;border-radius:9px;margin-bottom:12px;font-size:14px}
+.security-note{text-align:center;color:var(--muted);font-size:12px;margin-top:18px}
+.info-wrap{width:min(96vw,980px);margin:34px auto;padding:0 18px 28px}.info-header{display:flex;justify-content:space-between;gap:18px;margin-bottom:18px}
+.info-header h1{margin:0 0 6px;font-size:30px}.info-header p{margin:0;color:var(--muted)}
+.hero-card{padding:24px;margin-bottom:18px;display:flex;justify-content:space-between;gap:18px;align-items:center}
+.eyebrow{color:var(--muted);font-size:12px;text-transform:uppercase}.id{font-size:28px;font-weight:800}
+.badge{display:inline-block;padding:7px 11px;border-radius:999px;font-size:13px;font-weight:800}.ok{background:var(--okbg);color:var(--ok)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.section{padding:22px}.section h2{font-size:18px;margin:0 0 16px}
+.row{display:grid;grid-template-columns:42% 58%;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}
+.key{font-weight:700;color:#344054}.val{color:#111827;word-break:break-word}.remark{padding:18px 22px;margin-top:18px}
+@media(max-width:720px){.info-header,.hero-card{flex-direction:column;align-items:flex-start}.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.info-header h1{font-size:25px}}
