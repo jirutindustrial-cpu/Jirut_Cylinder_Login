@@ -3,7 +3,8 @@
 *{box-sizing:border-box} body{margin:0;font-family:Arial,Tahoma,sans-serif;background:var(--bg);color:var(--text)} a{color:var(--accent)}
 .page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
 .login-shell{width:min(94vw,440px)} .brand{text-align:center;margin-bottom:18px}
-.logo-box{width:76px;height:76px;margin:0 auto 14px;border-radius:18px;background:var(--accent);color:white;display:grid;place-items:center;font-size:28px;font-weight:800}
+.logo-box{width:120px;height:90px;margin:0 auto 14px;background:transparent;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.logo-box img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 .brand h1{margin:0;font-size:26px}.brand p{margin:8px 0 0;color:var(--muted);font-size:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 34px rgba(31,41,51,.08)}
 .login-card{padding:30px} label{display:block;margin:16px 0 7px;font-weight:700;font-size:14px}
