@@ -21,3 +21,241 @@ button{width:100%;border:0;border-radius:10px;padding:13px 16px;margin-top:22px;
 .row{display:grid;grid-template-columns:42% 58%;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}
 .key{font-weight:700;color:#344054}.val{color:#111827;word-break:break-word}.remark{padding:18px 22px;margin-top:18px}
 @media(max-width:720px){.info-header,.hero-card{flex-direction:column;align-items:flex-start}.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.info-header h1{font-size:25px}}
+/* ===== Cylinder Certificate Page ===== */
+
+.certificate-page{
+  min-height:100vh;
+  background:#f3f5f7;
+  padding:28px 18px 50px;
+  font-family:Arial,Tahoma,sans-serif;
+  color:#1f2933;
+}
+
+.certificate-topbar{
+  width:min(96vw,980px);
+  margin:0 auto 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.certificate-topbar h1{
+  margin:0;
+  font-size:30px;
+  color:#163c6b;
+}
+
+.certificate-topbar p{
+  margin:5px 0 0;
+  color:#667085;
+}
+
+.logout-link{
+  color:#163c6b;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.cylinder-certificate{
+  width:min(96vw,980px);
+  margin:0 auto;
+  background:#fff;
+  border:3px solid #b7832f;
+  border-radius:4px;
+  padding:32px 38px;
+  box-shadow:0 14px 35px rgba(31,41,55,.10);
+}
+
+.certificate-header{
+  text-align:center;
+  border-bottom:2px solid #d6b36b;
+  padding-bottom:20px;
+  margin-bottom:22px;
+}
+
+.certificate-logo img{
+  width:110px;
+  height:auto;
+  object-fit:contain;
+  margin-bottom:8px;
+}
+
+.certificate-header h2{
+  margin:4px 0;
+  color:#a66d15;
+  font-size:30px;
+}
+
+.certificate-header h3{
+  margin:7px 0 3px;
+  color:#173f73;
+  font-size:25px;
+}
+
+.certificate-header p{
+  margin:0;
+  color:#173f73;
+  font-weight:700;
+  font-size:18px;
+}
+
+.certificate-id{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 16px;
+  margin-bottom:22px;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+}
+
+.certificate-id span:first-child{
+  font-size:12px;
+  color:#667085;
+  font-weight:700;
+}
+
+.certificate-id strong{
+  font-size:24px;
+  color:#163c6b;
+  margin-right:auto;
+}
+
+.certificate-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.certificate-section{
+  padding:18px 20px;
+  border:1px solid #dfc28a;
+  border-radius:8px;
+  background:#fffdfa;
+}
+
+.certificate-section h3{
+  margin:0 0 14px;
+  color:#a66d15;
+  font-size:18px;
+  border-bottom:1px solid #ead8b5;
+  padding-bottom:8px;
+}
+
+.sub-title{
+  margin-top:22px !important;
+}
+
+.cert-row{
+  display:grid;
+  grid-template-columns:42% 58%;
+  gap:10px;
+  padding:9px 0;
+  border-bottom:1px solid #edf0f3;
+}
+
+.cert-row:last-child{
+  border-bottom:0;
+}
+
+.cert-row span{
+  font-weight:700;
+  color:#344054;
+}
+
+.cert-row strong{
+  font-weight:600;
+  color:#111827;
+  word-break:break-word;
+}
+
+.status-text{
+  color:#177245 !important;
+}
+
+.remark-box{
+  min-height:82px;
+  line-height:1.6;
+  color:#475467;
+}
+
+.certificate-footer{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:2px solid #d6b36b;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+}
+
+.certificate-footer strong{
+  color:#173f73;
+}
+
+.certificate-footer p{
+  margin:5px 0 0;
+  color:#667085;
+}
+
+.qr-placeholder{
+  width:105px;
+  height:105px;
+  border:2px dashed #98a2b3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:12px;
+  color:#667085;
+  background:#fff;
+}
+
+@media(max-width:720px){
+  .certificate-page{
+    padding:16px 10px 30px;
+  }
+
+  .certificate-topbar{
+    align-items:flex-start;
+  }
+
+  .certificate-topbar h1{
+    font-size:24px;
+  }
+
+  .cylinder-certificate{
+    padding:22px 16px;
+  }
+
+  .certificate-columns{
+    grid-template-columns:1fr;
+  }
+
+  .certificate-header h2{
+    font-size:25px;
+  }
+
+  .certificate-header h3{
+    font-size:20px;
+  }
+
+  .certificate-id{
+    flex-wrap:wrap;
+  }
+
+  .certificate-id strong{
+    width:100%;
+  }
+
+  .cert-row{
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+
+  .certificate-footer{
+    align-items:center;
+  }
+}
