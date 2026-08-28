@@ -8,6 +8,8 @@ app = Flask(__name__)
 
 app.secret_key = os.environ.get("SECRET_KEY", "temporary-secret-key")
 
+print("ADMIN_PASSWORD loaded:", bool(os.environ.get("ADMIN_PASSWORD")))
+
 
 # =========================
 # USERS / ROLES
