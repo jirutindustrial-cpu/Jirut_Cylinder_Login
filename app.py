@@ -17,26 +17,22 @@ print("ADMIN_PASSWORD loaded:", bool(os.environ.get("ADMIN_PASSWORD")))
 
 USERS = {
     "admin": {
-        "password": generate_password_hash(
-            os.environ.get("ADMIN_PASSWORD", "")
-        ),
+        "password": os.environ.get("ADMIN_PASSWORD", ""),
         "role": "admin"
     },
 
     "staff": {
-        "password": generate_password_hash(
-            os.environ.get("STAFF_PASSWORD", "")
-        ),
+        "password": os.environ.get("STAFF_PASSWORD", ""),
         "role": "staff"
     },
 
     "customer": {
-        "password": generate_password_hash(
-            os.environ.get("CUSTOMER_PASSWORD", "")
-        ),
+        "password": os.environ.get("CUSTOMER_PASSWORD", ""),
         "role": "customer"
     }
 }
+
+
 
 
 # =========================
@@ -78,13 +74,13 @@ def login():
     "user found =", bool(user),
     "password entered =", bool(password),
     "password match =",
-    check_password_hash(user["password"], password) if user and password else False
+    (user["password"] == password) if user and password else False
 )
 
         if (
             user
             and password
-            and check_password_hash(user["password"], password)
+         and user["password"] == password
         ):
 
             session["username"] = username
