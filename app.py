@@ -73,6 +73,13 @@ def login():
         password = request.form.get("password", "")
 
         user = USERS.get(username)
+        print(
+    "LOGIN DEBUG:",
+    "user found =", bool(user),
+    "password entered =", bool(password),
+    "password match =",
+    check_password_hash(user["password"], password) if user and password else False
+)
 
         if (
             user
