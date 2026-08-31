@@ -110,11 +110,11 @@ def cylinder_info():
     cylinder = CYLINDER.copy()
     username = session.get("username")
 
-if role == "customer":
-    allowed_cylinders = USERS.get(username, {}).get("allowed_cylinders", [])
-
-    if cylinder.get("cylinder_id") not in allowed_cylinders:
-        return "Access denied", 403
+    if role == "customer":
+        allowed_cylinders = USERS.get(username, {}).get("allowed_cylinders", [])
+    
+        if cylinder.get("cylinder_id") not in allowed_cylinders:
+            return "Access denied", 403
 
 
     # ADMIN
