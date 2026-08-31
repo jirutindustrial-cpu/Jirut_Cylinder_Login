@@ -31,7 +31,7 @@ USERS = {
     "role": "customer",
     "allowed_cylinders": ["CYL-000001"]
 }
-    }
+  
 }
 
 
