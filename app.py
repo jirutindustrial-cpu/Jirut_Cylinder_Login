@@ -26,9 +26,11 @@ USERS = {
         "role": "staff"
     },
 
-    "customer": {
-        "password": os.environ.get("CUSTOMER_PASSWORD", ""),
-        "role": "customer"
+  "customer": {
+    "password": os.environ.get("CUSTOMER_PASSWORD", ""),
+    "role": "customer",
+    "allowed_cylinders": ["CYL-000001"]
+}
     }
 }
 
@@ -106,6 +108,13 @@ def cylinder_info():
     role = session.get("role")
 
     cylinder = CYLINDER.copy()
+    username = session.get("username")
+
+if role == "customer":
+    allowed_cylinders = USERS.get(username, {}).get("allowed_cylinders", [])
+
+    if cylinder.get("cylinder_id") not in allowed_cylinders:
+        return "Access denied", 403
 
 
     # ADMIN
