@@ -150,9 +150,23 @@ def cylinder_info():
     else:
         return redirect(url_for("logout"))
 
-
+if role == "admin":
     return render_template(
-        "cylinder.html",
+        "admin_cylinder.html",
+        cylinder=cylinder,
+        role=role
+    )
+
+elif role == "staff":
+    return render_template(
+        "staff_cylinder.html",
+        cylinder=cylinder,
+        role=role
+    )
+
+elif role == "customer":
+    return render_template(
+        "customer_cylinder.html",
         cylinder=cylinder,
         role=role
     )
