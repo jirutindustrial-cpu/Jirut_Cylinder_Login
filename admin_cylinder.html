@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ cylinder.cylinder_id }} - Cylinder Information</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<main class="certificate-page">
+
+  <div class="certificate-topbar">
+    <div>
+      <h1>Cylinder Information</h1>
+      <p>Jirut Industrial Co., Ltd.</p>
+    </div>
+
+    <a class="logout-link" href="{{ url_for('logout') }}">
+      ออกจากระบบ
+    </a>
+  </div>
+
+  <section class="cylinder-certificate">
+
+    <div class="certificate-header">
+      <div class="certificate-logo">
+        <img src="{{ url_for('static', filename='image-removebg-preview (2).png') }}" alt="Jirut Logo">
+      </div>
+
+     <h2>ข้อมูลถังก๊าซ</h2>
+<h3>บริษัท จิรัฐอินดัสเทเรียล จำกัด</h3>
+<p>Jirut Industrial Co., Ltd.</p>
+
+
+    <div class="certificate-id">
+      <span>CYLINDER ID</span>
+      <strong>{{ cylinder.cylinder_id }}</strong>
+      <span class="badge ok">{{ cylinder.status }}</span>
+    </div>
+
+
+    <div class="certificate-columns">
+
+      <div class="certificate-section">
+        <h3>ข้อมูลพื้นฐานถัง</h3>
+
+        <div class="cert-row">
+          <span>Serial Number</span>
+          <strong>{{ cylinder.serial_number }}</strong>
+        </div>
+
+        <div class="cert-row">
+          <span>Owner / Customer</span>
+          <strong>{{ cylinder.owner }}</strong>
+        </div>
+
+        <div class="cert-row">
+          <span>Gas Type</span>
+          <strong>{{ cylinder.gas_type }}</strong>
+        </div>
+
+        <div class="cert-row">
+          <span>Capacity</span>
+          <strong>{{ cylinder.capacity }}</strong>
+        </div>
+
+        <div class="cert-row">
+          <span>Tare Weight</span>
+          <strong>{{ cylinder.tare_weight }}</strong>
+        </div>
+      </div>
+
+
+      <div class="certificate-section">
+        <h3>ข้อมูลอุปกรณ์</h3>
+
+        <div class="cert-row">
+          <span>Valve Type</span>
+          <strong>{{ cylinder.valve_type }}</strong>
+        </div>
+
+        <div class="cert-row">
+          <span>Fusible Plug</span>
+          <strong>{{ cylinder.fusible_plug }}</strong>
+        </div>
+
+        <h3 class="sub-title">สถานะปัจจุบัน</h3>
+
+        <div class="cert-row">
+          <span>Status</span>
+          <strong class="status-text">{{ cylinder.status }}</strong>
+        </div>
+      </div>
+
+
+      <div class="certificate-section">
+        <h3>ข้อมูลการตรวจสอบ</h3>
+
+        <div class="cert-row">
+          <span>Last Test Date</span>
+          <strong>{{ cylinder.last_test }}</strong>
+        </div>
+
+        <div class="cert-row">
+          <span>Next Test Date</span>
+          <strong>{{ cylinder.next_test }}</strong>
+        </div>
+
+        <div class="cert-row">
+          <span>Inspection Result</span>
+          <strong>{{ cylinder.inspection_result }}</strong>
+        </div>
+      </div>
+
+
+      <div class="certificate-section">
+        <h3>หมายเหตุ</h3>
+
+        <div class="remark-box">
+          {{ cylinder.remark }}
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="certificate-footer">
+      <div>
+        <strong>Jirut Industrial Co., Ltd.</strong>
+        <p>Cylinder Information System</p>
+      </div>
+
+      <div class="qr-placeholder">
+        QR CODE
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
